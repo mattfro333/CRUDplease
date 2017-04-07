@@ -1,0 +1,25 @@
+{
+  "name": "CRUDplease",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattfro333/CRUDplease.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattfro333/CRUDplease/issues"
+  },
+  "homepage": "https://github.com/mattfro333/CRUDplease#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "massive": "^2.6.0"
+  }
+}
