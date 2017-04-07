@@ -4,7 +4,7 @@ SET
   name = COALESCE($2, name),
   origin = COALESCE($3, origin),
   hometown = COALESCE($4, hometown),
-  imageUrl = COALESCE($5, imageUrl) 
+  imageurl = COALESCE($5, imageurl) 
 
 WHERE heroId = $1
 RETURNING *;
