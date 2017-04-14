@@ -7,7 +7,11 @@ angular.module('heroApp').service('heroSrvc', function($http){
     }).catch(err => console.log(err))
   }
 
-
+this.getHero = function(req, res, next){
+    return $http.get('/api/heroes/1').then(function(response){
+      return response.data
+    }).catch(err => console.log(err))
+}
 
 
 

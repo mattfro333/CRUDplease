@@ -8,11 +8,13 @@
   <body ng-controller='heroCtrl'>
     <h1>hello</h1>
     <button ng-click='getHeroes()'>get heroes</button>
+    <button ng-click='getHero()'>get hero</button>
     <div class="card-list" ng-hide="showHide">
       <div>
         {{name}}
       </div>
-      <div class="card" ng-repeat = "hero in heroes">
+
+      <div class="card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
         <section class="card-details">
           Name: {{hero.name}}
           </br>
@@ -23,7 +25,21 @@
         <img class="heroImg" ng-src="{{hero.imageurl}}" alt="">
         </br>
       </div>
+
+      <div class="card" ng-if = "oneHero">
+        <section class="card-details">
+          Name: {{oneHero.name}}
+          </br>
+          Origin: {{oneHero.origin}}
+          </br>
+          Hometown: {{oneHero.hometown}}
+        </section>
+        <img class="heroImg" ng-src="{{oneHero.imageurl}}" alt="">
+        </br>
+      </div>
     </div>
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
