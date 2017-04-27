@@ -13,7 +13,11 @@ this.getHero = function(req, res, next){
     }).catch(err => console.log(err))
 }
 
-
+ this.createHero = (req, res, next) => {
+    return $http.post('/api/heroes').then(function(response){
+      return response.data
+    }).catch(err => console.log(err))
+ }
 
 
 
