@@ -20,22 +20,12 @@ $scope.getHeroes = function(){
     })
   }
 
-  // $scope.heroC = null;
 
-$scope.createHero = function(){
-  var heroC = {
-    name: $scope.name,
-    origin: $scope.origin,
-    hometown: $scope.hometown,
-    imageurl: $scope.imageurl
-  }
-  var hero = $scope.hero
-  heroSrvc.createHero().then(response =>{
-    if(hero.name !== $scope.name){
-    hero.push(heroC)
-  }
+   $scope.create = function(hero) {
+        heroSrvc.create(hero).then(response => {
+          console.log(hero);
 
-  })
+    })
 }
 
 
