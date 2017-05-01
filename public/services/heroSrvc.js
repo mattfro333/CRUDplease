@@ -13,13 +13,18 @@ this.getHero = function(req, res, next){
     }).catch(err => console.log(err))
 }
 
- this.create = (req, res, next) => {
-    return $http.post('/api/heroes').then(function(response){
+this.create = (data) => {
+  return $http.post("/api/heroes", data).then(function(response){
       return response.data
+      console.log(data);
     }).catch(err => console.log(err))
  }
 
-
+ this.delete = (req, res, next) => {
+   return $http.delete('/api/heroes/:heroId').then(function(response){
+      return response.data
+   }).catch(err => console.log(err))
+ }
 
 
 })// end of module

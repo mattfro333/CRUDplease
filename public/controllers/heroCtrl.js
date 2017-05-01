@@ -27,7 +27,13 @@ $scope.getHeroes = function(){
 
     })
 }
+  $scope.delete = function(hero) {
 
+    heroSrvc.delete(hero).then(respnse => {
+
+      console.log(hero);
+    })
+  }
 
 
 })//end of module
