@@ -20,8 +20,9 @@ this.create = (data) => {
     }).catch(err => console.log(err))
  }
 
- this.delete = (req, res, next) => {
-   return $http.delete('/api/heroes/:heroId').then(function(response){
+ this.delete = (data) => {
+   console.log(data);
+   return $http.delete('/api/heroes/'+ data).then(function(response){
       return response.data
    }).catch(err => console.log(err))
  }
