@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body ng-controller='heroCtrl'>
+      <ui-view></ui-view>
     <h1>hello</h1>
     <button ng-click='getHeroes()'>get heroes</button>
     <button ng-click='getHero()'>get hero</button>
@@ -57,6 +58,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="controllers/heroCtrl.js" charset="utf-8"></script>
     <script src="services/heroSrvc.js" charset="utf-8"></script>
