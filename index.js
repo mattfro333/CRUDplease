@@ -17,7 +17,7 @@ app.get('/api/heroes', heroCtrl.getHeroes);
 app.get('/api/heroes/:heroId', heroCtrl.getHero);
 app.post('/api/heroes', heroCtrl.create);
 // app.put('/api/heroes/:heroId', heroCtrl.update);
-app.delete('/api/heroes/:heroId', heroCtrl.delete);
+app.delete('/api/heroes/:name', heroCtrl.delete);
 
 app.listen(3000, function(){
   console.log('listening on port', this.address().port)

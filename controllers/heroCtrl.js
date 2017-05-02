@@ -71,7 +71,7 @@ module.exports = {
     })
   },
   delete:function(req, res){
-    db.hero.delete_hero([req.params.heroId], function(err, results){
+    db.hero.delete_hero([req.params.name], function(err, results){
       if (err){
         console.error(err);
         return res.send(err);
