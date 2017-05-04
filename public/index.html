@@ -6,59 +6,23 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body ng-controller='heroCtrl'>
+    <nav>
+
+<p ui-sref="home">Home</p>
+  <p ui-sref="birth">Birth</p>
+    <p ui-sref="select">Select</p>
+</nav>
       <ui-view></ui-view>
     <h1>hello</h1>
-    <button ng-click='getHeroes()'>get heroes</button>
-    <button ng-click='getHero()'>get hero</button>
-    <div class="card-list" ng-hide="showHide">
-      <div>
-        {{name}}
-      </div>
-
-      <div class="card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
-        <section class="card-details">
-          Name: {{hero.name}}
-          </br>
-          Origin: {{hero.origin}}
-          </br>
-          Hometown: {{hero.hometown}}
-        </section>
-        <img class="heroImg" ng-src="{{hero.imageurl}}" alt="">
-        </br>
-      </div>
-
-      <div class="card" ng-if = "oneHero">
-        <section class="card-details">
-          Name: {{oneHero.name}}
-          </br>
-          Origin: {{oneHero.origin}}
-          </br>
-          Hometown: {{oneHero.hometown}}
-        </section>
-        <img class="heroImg" ng-src="{{oneHero.imageurl}}" alt="">
-        </br>
-      </div>
-    </div>
-
-<div class="birth">
-
-    <h1>Birth a Hero</h1>
-    <input ng-model="hero.name" type="text" name="" value="" placeholder="Name">
-    <input ng-model="hero.origin" type="text" name="" value="" placeholder="Origin">
-    <input ng-model="hero.hometown" type="text" name="" value="" placeholder="Home town">
-    <input ng-model="hero.imageurl" type="text" name="" value="" placeholder="Image">
-    <button ng-click="create(hero)" class="btn btn-primary"  type="submit" name="button"></button>
-
-</div>
-
-<div class="death">
-  <input ng-model="hero.name" type="text" name="" value="" placeholder="name">
-  <button ng-click="delete(hero.name)" class="btn btn-primary"  type="submit" name="button"></button>
-</div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="controllers/heroCtrl.js" charset="utf-8"></script>
     <script src="services/heroSrvc.js" charset="utf-8"></script>
