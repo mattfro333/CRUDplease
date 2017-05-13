@@ -17,6 +17,11 @@ angular.module('heroApp',['ui.router'])
         templateUrl: './views/heroSelect.html',
         controller: 'heroCtrl'
       })
+      .state('battle', {
+        url: '/battle',
+        templateUrl: './views/battle.html',
+        controller: 'heroCtrl'
+      })
       .state('death', {
         url: '/death',
         templateUrl: './views/heroDeath.html',

@@ -1,0 +1,41 @@
+
+.card-list{
+  display: flex;
+}
+.card{
+  background-color: #adadad;
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+  margin: 10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroImg{
+  max-height: 200px;
+}
+nav {
+  font-size: 27px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  height: 70px;
+  background: rgb(69,72,77, 2);
+  background: linear-gradient(to right, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+  padding: 0 9.6vw
+}
+
+  body {
+
+    background-image: url("http://vignette3.wikia.nocookie.net/wartune/images/6/69/Arena_Battle_Background.jpeg/revision/latest?cb=20140611222320");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    margin: 0;
+
+
+}
