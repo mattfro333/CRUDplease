@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 
 var tx = document.getElementById('cabview').getContext('2d');
 var x, y, vp;
@@ -307,3 +308,4 @@ function endControlls(event)
  document.removeEventListener('mousemove', onMouseDrag);
  document.removeEventListener('mouseup', endControlls);
 }
+});

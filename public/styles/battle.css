@@ -8,7 +8,7 @@
   width: 300px;
   border-radius: 20px;
   margin: 10px;
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -30,12 +30,12 @@ nav {
 
   body {
 
-    background-image: url("http://vignette3.wikia.nocookie.net/wartune/images/6/69/Arena_Battle_Background.jpeg/revision/latest?cb=20140611222320");
+    background-image: url("https://uploads.disquscdn.com/images/356296deeb5f5c10ec5cb4aebd4e2e6d276a207c9bff320b4462a08cfce8dc67.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size: auto;
+    background-color: black;
     background-attachment: fixed;
     min-height: 100%;
     margin: 0;
-
-
 }

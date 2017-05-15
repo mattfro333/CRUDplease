@@ -21,7 +21,7 @@ module.exports = {
       req.body.name,
       req.body.origin,
       req.body.hometown,
-      req.body.imageUrl
+      req.body.imageurl
     ], function(err, results){
       if (err){
         console.error(err);
@@ -60,7 +60,7 @@ module.exports = {
       req.body.name,
       req.body.origin,
       req.body.hometown,
-      req.body.imageUrl
+      req.body.imageurl
     ],
     function(err, results){
       if(err){

@@ -1,0 +1,18 @@
+.tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+
+}
+.title {
+  position: absolute;
+  top: 27vh;
+  font-size: 4.5em;
+  text-align: center;
+  color: white;
+  background: rgb(69,72,77, 2);
+  background: linear-gradient(to right, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+  border-radius:50px
+
+}
