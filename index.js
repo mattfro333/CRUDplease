@@ -15,6 +15,7 @@ const heroCtrl = require('./controllers/heroCtrl');
 
 app.get('/api/heroes', heroCtrl.getHeroes);
 app.get('/api/heroes/:heroId', heroCtrl.getHero);
+// app.get('/api/heroes', heroCtrl.fight);
 app.post('/api/heroes', heroCtrl.create);
 // app.put('/api/heroes/:heroId', heroCtrl.update);
 app.delete('/api/heroes/:name', heroCtrl.delete);

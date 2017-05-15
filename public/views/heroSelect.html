@@ -1,12 +1,14 @@
 <body>
+  <link rel="stylesheet" href="./styles/heroSelect.css">
+
 <button ng-click='getHeroes()'>get heroes</button>
 <button ng-click='getHero()'>get hero</button>
 <div class="card-list" ng-hide="showHide">
-  <div>
+  <div id="yes-drop">
     {{name}}
   </div>
 
-  <div class="card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
+  <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
     <section class="card-details">
       Name: {{hero.name}}
       </br>
@@ -18,7 +20,7 @@
     </br>
   </div>
 
-  <div class="card" ng-if = "oneHero">
+  <div id="yes-drop" class="draggable drag-drop card" ng-if = "oneHero">
     <section class="card-details">
       Name: {{oneHero.name}}
       </br>
@@ -30,5 +32,11 @@
     </br>
   </div>
 </div>
+
+<div id="outer-dropzone" class="dropzone">
+  #outer-dropzone
+  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+ </div>
+<button ng-click="fight(event)" ui-sref="battle">Fight!!!</button>
+<script src=".././dragdrop.js"></script>
 </body>
-<button ui-sref="battle">Fight!!!</button>

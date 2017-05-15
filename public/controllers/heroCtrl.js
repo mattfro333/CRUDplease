@@ -34,6 +34,12 @@ console.log(name);
        });
      };
 
+  // $scope.fight = function(event){
+  //   console.log(event);
+  //   if(event){
+  //     $scope.event = response;
+  //   }
+  // }
 
 
 })//end of module
