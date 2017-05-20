@@ -1,5 +1,5 @@
 angular.module('heroApp').controller('heroCtrl', function($scope, heroSrvc){
-
+var list2 = [];
 $scope.showHide = false;
 
 $scope.getHeroes = function(){
@@ -34,12 +34,12 @@ console.log(name);
        });
      };
 
-  // $scope.fight = function(event){
-  //   console.log(event);
-  //   if(event){
-  //     $scope.event = response;
-  //   }
-  // }
+  $scope.fight = function(list2){
+    console.log(list2);
+    if(list2){
+      $scope.list2 = response;
+    }
+  }
 
 
 })//end of module

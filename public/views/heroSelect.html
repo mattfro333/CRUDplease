@@ -20,7 +20,7 @@
     </br>
   </div>
 
-  <div id="yes-drop" class="draggable drag-drop card" ng-if = "oneHero">
+  <div id="yes-drop"  class="draggable drag-drop card" ng-if = "oneHero">
     <section class="card-details">
       Name: {{oneHero.name}}
       </br>
@@ -33,10 +33,10 @@
   </div>
 </div>
 
-<div id="outer-dropzone" class="dropzone">
+<div id="outer-dropzone" ng-model="list2"  class="dropzone">
   #outer-dropzone
-  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+  <div id="inner-dropzone" ng-model="list2"  class="dropzone">#inner-dropzone</div>
  </div>
-<button ng-click="fight(event)" ui-sref="battle">Fight!!!</button>
+<button ng-click="fight()" ui-sref="battle">Fight!!!</button>
 <script src=".././dragdrop.js"></script>
 </body>

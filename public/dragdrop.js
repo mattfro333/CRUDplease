@@ -53,5 +53,12 @@ interact('.draggable').draggable({
       // drop successful
       ondrop: function (event) {
           console.log(event);
+      },
+
+      fight: function (event) {
+        console.log(event);
+        if(event){
+        event = response;
+        }
       }
   });

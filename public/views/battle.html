@@ -1,1 +1,30 @@
 <link rel="stylesheet" href="./styles/battle.css">
+<div class="card-list" ng-hide="showHide">
+  <div id="yes-drop">
+    {{name}}
+  </div>
+
+  <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
+    <section class="card-details">
+      Name: {{hero.name}}
+      </br>
+      Origin: {{hero.origin}}
+      </br>
+      Hometown: {{hero.hometown}}
+    </section>
+    <img class="heroImg" ng-src="{{hero.imageurl}}" alt="">
+    </br>
+  </div>
+
+  <div id="yes-drop" ng-model="list2" class="draggable drag-drop card" ng-if = "oneHero">
+    <section class="card-details">
+      Name: {{oneHero.name}}
+      </br>
+      Origin: {{oneHero.origin}}
+      </br>
+      Hometown: {{oneHero.hometown}}
+    </section>
+    <img class="heroImg" ng-src="{{oneHero.imageurl}}" alt="">
+    </br>
+  </div>
+</div>
