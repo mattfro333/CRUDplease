@@ -4,9 +4,9 @@
     {{name}}
   </div>
 
-  <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
+  <div id="yes-drop" ng-model="chosen" class="draggable drag-drop card">
     <section class="card-details">
-      Name: {{hero.name}}
+      Name: {{object.relatedTarget.innerText}}
       </br>
       Origin: {{hero.origin}}
       </br>
@@ -16,9 +16,9 @@
     </br>
   </div>
 
-  <div id="yes-drop" ng-model="list2" class="draggable drag-drop card" ng-if = "oneHero">
+  <div id="yes-drop" ng-model="chosen" class="draggable drag-drop card">
     <section class="card-details">
-      Name: {{oneHero.name}}
+      Name: {{hero.relatedTarget.innerText}}
       </br>
       Origin: {{oneHero.origin}}
       </br>
