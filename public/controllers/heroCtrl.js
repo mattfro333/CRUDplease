@@ -3,17 +3,18 @@ var chosen = [];
 $scope.showHide = false;
 
 $scope.getHeroes = function(){
-  $scope.showHide = !$scope.showHide;
+  // $scope.showHide = !$scope.showHide;
   heroSrvc.getHeroes().then(response => {
     if($scope.oneHero){
        $scope.oneHero = false;
     }
     $scope.heroes = response
+    console.log($scope.heroes);
   })
 }
 
   $scope.getHero = function(){
-    $scope.showHide = !$scope.showHide;
+    // $scope.showHide = !$scope.showHide;
     heroSrvc.getHero().then(response => {
       console.log(response);
       $scope.oneHero = response
@@ -57,6 +58,7 @@ console.log(name);
              target.setAttribute('data-y', y);
            },
           onend: function(event) {
+            event = $scope.oneHero
                console.log(event);
            }
        });
@@ -87,15 +89,17 @@ console.log(name);
 
            // drop successful
           ondrop: function (event) {
+            event = $scope.oneHero
             chosen.push(event)
                console.log(event);
            },
 
 
        });
-       $scope.fight = function (event) {
-         $scope.chosen
-         console.log(chosen);
+       $scope.fight = function(){
+           $scope.chosen
+           console.log(chosen);
+
        }
 
 })//end of module

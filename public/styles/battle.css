@@ -1,5 +1,23 @@
 
 
+.card-list{
+  display: flex;
+}
+.card{
+  background-color: #adadad;
+  padding: 20px;
+  width: 200px;
+  border-radius: 20px;
+  margin: 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroImg{
+  max-height: 200px;
+  max-width: 200px;
+}
 
   body {
 
@@ -12,3 +30,7 @@
     min-height: 100%;
     margin: 0;
 }
+button {
+  background: #ff0000;
+  background-image: linear-gradient(top, #496e85, #7bafd1);
+  text-decoration: none; }
