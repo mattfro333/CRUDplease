@@ -1,4 +1,4 @@
-angular.module('heroApp').controller('heroCtrl', function($scope, heroSrvc){
+angular.module('heroApp').controller('heroCtrl', function($scope, heroSrvc, $rootScope){
 var chosen = [];
 $scope.showHide = false;
 
@@ -91,13 +91,14 @@ console.log(name);
           ondrop: function (event) {
             event = $scope.oneHero
             chosen.push(event)
+            $rootScope.$broadcast(chosen)
                console.log(event);
            },
 
 
        });
        $scope.fight = function(){
-           $scope.chosen
+           $rootScope.$on(chosen)
            console.log(chosen);
 
        }

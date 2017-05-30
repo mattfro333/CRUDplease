@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="./styles/battle.css">
 <body>
 
-  <div class="card-list">
+  <div class="card-list" ng-repeat = "hero in heroes">
 
 
-    <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" ng-repeat = "hero in heroes">
+    <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" >
       <section class="card-details">
         Name: {{hero.name}}
         </br>
@@ -16,18 +16,18 @@
       </br>
     </div>
 
-    <div id="yes-drop"  class="draggable drag-drop card" ng-model="chosen.oneHero">
+    <div id="yes-drop" ng-if="oneHero"  class="draggable drag-drop card" >
       <section class="card-details">
-        Name: {{chosen[0].name}}
+        Name: {{chosen.object.name}}
         </br>
-        Origin: {{chosen[0].origin}}
+        Origin: {{chosen.object.origin}}
         </br>
-        Hometown: {{chosen[0].hometown}}
+        Hometown: {{chosen.object.hometown}}
       </section>
-      <img class="heroImg" ng-src="{{chosen.oneHero.imageurl}}" alt="">
+      <img class="heroImg" ng-src="{{chosen.object.imageurl}}" alt="">
       </br>
     </div>
   </div>
+<button ng-click="fight(chosen)" ui-sref="battle">Fight!!!</button>
 
-  <button ng-click="fight(chosen)" ui-sref="battle">Fight!!!</button>
 </body>
