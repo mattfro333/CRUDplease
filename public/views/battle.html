@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="./styles/battle.css">
-<body>
+<body ng-controller="battleCtrl" class="ng-scope">
 
   <div class="card-list" ng-repeat = "hero in heroes">
-
+<h1>Hello{{chosen}}</h1>
 
     <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" >
       <section class="card-details">
@@ -18,16 +18,16 @@
 
     <div id="yes-drop" ng-if="oneHero"  class="draggable drag-drop card" >
       <section class="card-details">
-        Name: {{chosen.object.name}}
+        Name: {{chosen[0].name}}
         </br>
-        Origin: {{chosen.object.origin}}
+        Origin: {{chosen[0].origin}}
         </br>
-        Hometown: {{chosen.object.hometown}}
+        Hometown: {{chosen[0].hometown}}
       </section>
-      <img class="heroImg" ng-src="{{chosen.object.imageurl}}" alt="">
+      <img class="heroImg" ng-src="{{chosen[0].imageurl}}" alt="">
       </br>
     </div>
   </div>
-<button ng-click="fight(chosen)" ui-sref="battle">Fight!!!</button>
+<button ng-click="Sib()" ui-sref="battle">Fight!!!</button>
 
 </body>
