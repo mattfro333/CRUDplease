@@ -1,5 +1,5 @@
 angular.module('heroApp').controller('heroCtrl', function($scope, heroSrvc, $rootScope, battleSrvc){
-var chosen = [];
+var chosen = []
 $scope.showHide = false;
 
 $scope.getHeroes = function(){
@@ -34,10 +34,11 @@ $scope.getHeroes = function(){
 console.log(name);
        });
      };
-     $rootScope.fight = function ($rootScope) {
-       return $rootScope.chosen
-       console.log($rootScope.chosen);
-   }
+
+     $scope.fight = function () {
+
+       console.log(chosen);
+    }
 
      interact('.draggable').draggable({
            inertia: true,
@@ -93,11 +94,12 @@ console.log(name);
 
            // drop successful
           ondrop: function (event, $rootScope) {
+            // let chosen = []
             event = $scope.oneHero
             chosen.push(event)
-           $rootScope = chosen
+            battleSrvc.now = chosen
 
-               console.log($rootScope);
+              //  console.log(chosen);
            },
 
 

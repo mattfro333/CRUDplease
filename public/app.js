@@ -20,7 +20,7 @@ angular.module('heroApp',['ui.router'])
       .state('battle', {
         url: '/battle',
         templateUrl: './views/battle.html',
-        controller: 'heroCtrl'
+        controller: 'battleCtrl'
       })
       .state('death', {
         url: '/death',
