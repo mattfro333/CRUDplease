@@ -63,7 +63,9 @@ console.log(name);
              target.setAttribute('data-y', y);
            },
           onend: function(event) {
-            event = $scope.oneHero
+            var i =  0
+            event =  $scope.heroes[i]
+
                console.log(event);
            }
        });
@@ -95,11 +97,16 @@ console.log(name);
            // drop successful
           ondrop: function (event, $rootScope) {
             // let chosen = []
-            event = $scope.oneHero
+      if  (event = $scope.heroes[0]){
             chosen.push(event)
-            battleSrvc.now = chosen
+             console.log(chosen);
+          } else if (event = $scope.heroes[1]) {
+            chosen.push(event)
+             console.log(chosen);
+          }
+          return  battleSrvc.now = chosen
 
-              //  console.log(chosen);
+               console.log(chosen);
            },
 
 

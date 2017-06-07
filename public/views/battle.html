@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="./styles/battle.css">
 <body ng-controller="battleCtrl" class="ng-scope">
 
-  <div class="card-list" ng-repeat = "hero in heroes">
-<h1>Hello{{chosen}}</h1>
+  <div class="card-list" ng-model = "chosen">
 
-    <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" >
+
+    <!-- <div id="yes-drop" class="draggable drag-drop card" ng-if = "!oneHero" >
       <section class="card-details">
         Name: {{hero.name}}
         </br>
@@ -14,9 +14,9 @@
       </section>
       <img class="heroImg" ng-src="{{hero.imageurl}}" alt="">
       </br>
-    </div>
+    </div> -->
+    <div id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
 
-    <div id="yes-drop" ng-if="oneHero"  class="draggable drag-drop card" >
       <section class="card-details">
         Name: {{chosen[0].name}}
         </br>
@@ -28,6 +28,20 @@
       </br>
     </div>
   </div>
+<div class="card-list" ng-model = "chosen">
+    <div id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
+      <section class="card-details">
+        Name: {{chosen[0].name}}
+        </br>
+        Origin: {{chosen[0].origin}}
+        </br>
+        Hometown: {{chosen[0].hometown}}
+      </section>
+      <img class="heroImg" ng-src="{{chosen[0].imageurl}}" alt="">
+      </br>
+    </div>
+  </div>
+
 <!-- <button ng-click="fight({arr: chosen})" ui-sref="battle">Fight!!!</button> -->
 
 </body>
