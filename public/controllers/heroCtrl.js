@@ -63,7 +63,12 @@ console.log(name);
              target.setAttribute('data-y', y);
            },
           onend: function(event) {
+            console.log(event)
+            // prop type grab through innerHTML
+        firstChild.style.textDecoration = "none"
+    secondChild.style.backgroundColor = "red"
             var i =  0
+            i++
             event =  $scope.heroes[i]
 
                console.log(event);
