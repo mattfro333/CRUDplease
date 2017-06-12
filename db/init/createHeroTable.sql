@@ -7,4 +7,11 @@ CREATE TABLE IF NOT EXISTS hero(
   hometown VARCHAR(50),
   imageurl VARCHAR(400)
 );
+CREATE TABLE IF NOT EXISTS powers(
+  powersId SERIAL PRIMARY KEY,
+  ultimate VARCHAR(50),
+  ultDamage INTEGER,
+  basic VARCHAR(50),
+  basicDamage INTEGER
+);
 -- INSERT INTO Hero(name, origin, hometown, imageurl)values('Wolverine','Funky Genes','Unknown','null')

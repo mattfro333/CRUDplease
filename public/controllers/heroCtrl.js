@@ -13,7 +13,7 @@ $scope.getHeroes = function(){
     console.log($scope.heroes);
 
     console.log($scope.heroes[0].name)
-    interact('.draggable', first).draggable({
+    interact('.draggable').draggable({
           inertia: true,
           restrict: {
             restriction: "#visualizer-panel",
