@@ -12,6 +12,7 @@ let db = massive.connectSync({
 
 app.set('db', db);
 const heroCtrl = require('./controllers/heroCtrl');
+const powersCtrl = require('./controllers/powersCtrl');
 
 app.get('/api/heroes', heroCtrl.getHeroes);
 app.get('/api/heroes/:heroId', heroCtrl.getHero);
