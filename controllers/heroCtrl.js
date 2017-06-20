@@ -20,7 +20,7 @@ module.exports = {
     db.hero.create_hero([
       req.body.name,
       req.body.origin,
-      req.body.hometown,
+      req.body.hp,
       req.body.imageurl
     ], function(err, results){
       if (err){
@@ -59,7 +59,7 @@ module.exports = {
       req.params.heroId,
       req.body.name,
       req.body.origin,
-      req.body.hometown,
+      req.body.hp,
       req.body.imageurl
     ],
     function(err, results){

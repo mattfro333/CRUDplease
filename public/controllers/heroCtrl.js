@@ -83,25 +83,14 @@ $scope.getHeroes = function(){
            // let chosen = []
            console.log(event)
            console.log(event.dragEvent.target.innerText.includes($scope.heroes[0].name))
-           if(event.dragEvent.target.innerText.includes($scope.heroes[0].name)){
-             event = $scope.heroes[0]
+          for(var i = 0; i < $scope.heroes.length; i++) {
+           if(event.dragEvent.target.innerText.includes($scope.heroes[i].name)){
+             event = $scope.heroes[i]
              chosen.push(event)
            return  battleSrvc.now = chosen
-             console.log(event)
-           } else if (event.dragEvent.target.innerText.includes($scope.heroes[1].name)){
-             event = $scope.heroes[1]
-             chosen.push(event)
-           return  battleSrvc.now = chosen
-             console.log($scope.heroes[1].name)
-             console.log(event)
-           }
-           chosen.push(event)
-         return  battleSrvc.now = chosen
-
-              console.log(chosen);
-          },
-
-
+          }
+   }
+},
       });
   })
 }

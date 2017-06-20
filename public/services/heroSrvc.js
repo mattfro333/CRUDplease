@@ -27,13 +27,11 @@ this.create = (data) => {
    }).catch(err => console.log(err))
  }
 
- // this.fight = function(chosen){
- //   console.log(event)
- //   return $http.get('/api/heroes/'+ data).then(function(response){
- //     return response.data
- //   })
-// }
-
-
+ this.create = (data) => {
+   return $http.post("/api/powers", data).then(function(response){
+       return response.data
+       console.log(data);
+     }).catch(err => console.log(err))
+  }
 
 })// end of module

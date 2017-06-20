@@ -53,6 +53,14 @@ module.exports = {
       return res.send(results[0]);
     })
   },
+  // ult:function(req, res){
+  //   let ult = req.query.ultDamage;
+  //   db.join.ultjoin([ult],(err, powers) => {
+  //     if (err) console.log(err);
+  //     res.json(powers);
+  //   })
+  // }
+
   update:function(req, res){
     db.powers.update_Powers([
       req.params.powersId,

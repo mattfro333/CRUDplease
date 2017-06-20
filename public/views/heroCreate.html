@@ -7,9 +7,17 @@
     <h1>Birth a Hero</h1>
     <input ng-model="hero.name" type="text" name="" value="" placeholder="Name">
     <input ng-model="hero.origin" type="text" name="" value="" placeholder="Origin">
-    <input ng-model="hero.hometown" type="text" name="" value="" placeholder="Home town">
+    <input ng-model="hero.hp" type="text" name="" value="" placeholder="Hit Points">
     <input ng-model="hero.imageurl" type="text" name="" value="" placeholder="Image">
     <button ng-click="create(hero)" class="btn btn-primary"  type="submit" name="button">Give Birth!</button>
 
+</div>
+<div class="birth">
+<h1>Your Heroes Abilities</h1>
+<input ng-model="powers.ultimate" type="text" name="" value="" placeholder="Ultimate Attack">
+<input ng-model="powers.ultDamage" type="text" name="" value="" placeholder="Ult Damage">
+<input ng-model="powers.basic" type="text" name="" value="" placeholder="Basic Attack">
+<input ng-model="powers.basicDamage" type="text" name="" value="" placeholder="Basic Damage">
+<button ng-click="create(powers)" class="btn btn-primary"  type="submit" name="button">The Power!</button>
 </div>
 </body>
