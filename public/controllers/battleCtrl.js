@@ -10,6 +10,7 @@ angular.module('heroApp').controller('battleCtrl',
        battleSrvc.getBasic1().then(response => {
          console.log(response);
          $scope.powers = response
+        //  return battleSrvc.pow
        })
      }
      $scope.getUlt1 = function(){

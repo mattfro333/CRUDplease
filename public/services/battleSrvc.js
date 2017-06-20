@@ -48,7 +48,7 @@ console.log(this.now[1].hp)
 this.getUlt2 = function(req, res, next){
   console.log(this.now);
   console.log(typeof this.now[1].hp)
-    return $http.get('/api/powers/1').then( (response) => {
+    return $http.get('/api/powers/2').then( (response) => {
 
       powers = response.data
       console.log(powers)
