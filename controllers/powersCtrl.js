@@ -40,7 +40,7 @@ module.exports = {
       return res.send(results);
     })
   },
-  getPower:function(req, res){
+  getBasic1:function(req, res){
     db.powers.read_power([req.params.powersId],
     function(err, results){
       if (err){
@@ -53,13 +53,46 @@ module.exports = {
       return res.send(results[0]);
     })
   },
-  // ult:function(req, res){
-  //   let ult = req.query.ultDamage;
-  //   db.join.ultjoin([ult],(err, powers) => {
-  //     if (err) console.log(err);
-  //     res.json(powers);
-  //   })
-  // }
+  getUlt1:function(req, res){
+    db.powers.read_power([req.params.powersId],
+    function(err, results){
+      if (err){
+        console.error(err);
+        return res.send(err);
+      }
+      if (results.length === 0){
+        return res.status(404).send("No powers Found")
+      }
+      return res.send(results[0]);
+    })
+  },
+
+  getBasic2:function(req, res){
+    db.powers.read_power([req.params.powersId],
+    function(err, results){
+      if (err){
+        console.error(err);
+        return res.send(err);
+      }
+      if (results.length === 0){
+        return res.status(404).send("No powers Found")
+      }
+      return res.send(results[0]);
+    })
+  },
+  getUlt2:function(req, res){
+    db.powers.read_power([req.params.powersId],
+    function(err, results){
+      if (err){
+        console.error(err);
+        return res.send(err);
+      }
+      if (results.length === 0){
+        return res.status(404).send("No powers Found")
+      }
+      return res.send(results[0]);
+    })
+  },
 
   update:function(req, res){
     db.powers.update_Powers([

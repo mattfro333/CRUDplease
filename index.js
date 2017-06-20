@@ -20,7 +20,10 @@ app.get('/api/heroes/:heroId', heroCtrl.getHero);
 app.post('/api/heroes', heroCtrl.create);
 // app.put('/api/heroes/:heroId', heroCtrl.update);
 app.delete('/api/heroes/:name', heroCtrl.delete);
-app.get('/api/powers/:powersId', powersCtrl.getPower);
+app.get('/api/powers/:powersId', powersCtrl.getBasic1);
+app.get('/api/powers/:powersId', powersCtrl.getUlt1);
+app.get('/api/powers/:powersId', powersCtrl.getBasic2);
+app.get('/api/powers/:powersId', powersCtrl.getUlt2);
 app.post('/api/powers', powersCtrl.create);
 app.listen(3000, function(){
   console.log('listening on port', this.address().port)
