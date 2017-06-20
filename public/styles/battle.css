@@ -2,6 +2,10 @@
 
 .card-list{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 .card{
   background-color: #adadad;
@@ -11,7 +15,8 @@
   margin: 10px;
   height: 300px;
   display: flex;
-  flex-direction: column;
+
+
 }
 
 .heroImg{
@@ -34,3 +39,34 @@ button {
   background: #ff0000;
   background-image: linear-gradient(top, #496e85, #7bafd1);
   text-decoration: none; }
+
+ .P1 {
+
+ }
+
+ .P2 {
+
+   float: right;
+ }
+ .P1ab {
+   position: relative;
+   color: white;
+   float: left;
+   bottom:80px;
+   left: 190px
+
+ }
+.P2ab {
+  position: relative;
+  color: white;
+  float: right;
+  bottom:80px;
+  right: 170px
+}
+ .P1Card {
+
+
+ }
+.P2Card {
+
+}
