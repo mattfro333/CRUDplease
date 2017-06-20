@@ -1,12 +1,6 @@
 
 
-.card-list{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
 
-}
 .card{
   background-color: #adadad;
   padding: 20px;
@@ -15,7 +9,7 @@
   margin: 10px;
   height: 300px;
   display: flex;
-
+flex-direction: column;
 
 }
 
@@ -41,32 +35,38 @@ button {
   text-decoration: none; }
 
  .P1 {
-
+   position: relative;
+   top: 29em;
  }
 
  .P2 {
-
+   position: relative;
+   top: 29em;
    float: right;
  }
  .P1ab {
    position: relative;
    color: white;
    float: left;
-   bottom:80px;
-   left: 190px
-
+   top: 31em;
+   left: 7em
  }
 .P2ab {
   position: relative;
   color: white;
   float: right;
-  bottom:80px;
-  right: 170px
+  right: 7em;
+  top: 31em
 }
  .P1Card {
-
-
+  position: relative;
+  float: left;
+  top: 4em;
+  left: 15em
  }
 .P2Card {
-
+ position: relative;
+ float: right;
+ top: 4em;
+ right: 15em
 }
