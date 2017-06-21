@@ -40,21 +40,21 @@ module.exports = {
       return res.send(results);
     })
   },
-  getBasic1:function(req, res){
-    db.powers.read_power([req.params.powersId],
-    function(err, results){
-      if (err){
-        console.error(err);
-        return res.send(err);
-      }
-      if (results.length === 0){
-        return res.status(404).send("No powers Found")
-      }
-      return res.send(results[0]);
-    })
-  },
+  // getBasic1:function(req, res){
+  //   db.powers.read_power([req.params.Id],
+  //   function(err, results){
+  //     if (err){
+  //       console.error(err);
+  //       return res.send(err);
+  //     }
+  //     if (results.length === 0){
+  //       return res.status(404).send("No powers Found")
+  //     }
+  //     return res.send(results[0]);
+  //   })
+  // },
   getUlt1:function(req, res){
-    db.powers.read_power([req.params.powersId],
+    db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
         console.error(err);
@@ -68,7 +68,7 @@ module.exports = {
   },
 
   getBasic2:function(req, res){
-    db.powers.read_power([req.params.powersId],
+    db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
         console.error(err);
@@ -81,7 +81,7 @@ module.exports = {
     })
   },
   getUlt2:function(req, res){
-    db.powers.read_power([req.params.powersId],
+    db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
         console.error(err);
@@ -96,7 +96,7 @@ module.exports = {
 
   update:function(req, res){
     db.powers.update_Powers([
-      req.params.powersId,
+      req.params.Id,
       req.body.ultimate,
       req.body.ultDamage,
       req.body.basic,
@@ -111,7 +111,7 @@ module.exports = {
     })
   },
   delete:function(req, res){
-    db.powers.delete_powers([req.params.powersId], function(err, results){
+    db.powers.delete_powers([req.params.Id], function(err, results){
       if (err){
         console.error(err);
         return res.send(err);

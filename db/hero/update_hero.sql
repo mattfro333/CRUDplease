@@ -6,7 +6,7 @@ SET
   hp = COALESCE($4, hp),
   imageurl = COALESCE($5, imageurl) 
 
-WHERE heroId = $1
+WHERE Id = $1
 RETURNING *;
 
 /* Show how to return modified object */

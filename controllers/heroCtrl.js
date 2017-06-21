@@ -42,7 +42,7 @@ module.exports = {
     })
   },
   getHero:function(req, res){
-    db.hero.read_hero([req.params.heroId],
+    db.hero.read_hero([req.params.Id],
     function(err, results){
       if (err){
         console.error(err);
@@ -56,7 +56,7 @@ module.exports = {
   },
   update:function(req, res){
     db.hero.update_hero([
-      req.params.heroId,
+      req.params.Id,
       req.body.name,
       req.body.origin,
       req.body.hp,

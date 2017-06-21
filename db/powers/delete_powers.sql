@@ -1,2 +1,2 @@
 DELETE FROM powers
-WHERE powersId = $1
+WHERE Id = $1

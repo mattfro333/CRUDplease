@@ -1,7 +1,7 @@
 DROP TABLE powers;
 
 CREATE TABLE IF NOT EXISTS powers(
-  powersId SERIAL PRIMARY KEY,
+  Id SERIAL PRIMARY KEY,
   ultimate VARCHAR(50),
   ultDamage INTEGER,
   basic VARCHAR(50),

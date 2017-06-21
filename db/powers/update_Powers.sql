@@ -4,5 +4,5 @@ SET
   ultDamage = COALESCE($3, ultDamage),
   basic = COALESCE($4, basic)
   basicDamage = COALESCE($5, basicDamage)
-WHERE powersId = $1
+WHERE Id = $1
 RETURNING *;

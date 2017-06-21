@@ -15,15 +15,16 @@ const heroCtrl = require('./controllers/heroCtrl');
 const powersCtrl = require('./controllers/powersCtrl');
 
 app.get('/api/heroes', heroCtrl.getHeroes);
-app.get('/api/heroes/:heroId', heroCtrl.getHero);
+app.get('/api/heroes/:Id', heroCtrl.getHero);
 // app.get('/api/heroes', heroCtrl.fight);
 app.post('/api/heroes', heroCtrl.create);
-// app.put('/api/heroes/:heroId', heroCtrl.update);
+// app.put('/api/heroes/:Id', heroCtrl.update);
 app.delete('/api/heroes/:name', heroCtrl.delete);
-app.get('/api/powers/:powersId', powersCtrl.getBasic1);
-app.get('/api/powers/:powersId', powersCtrl.getUlt1);
-app.get('/api/powers/:powersId', powersCtrl.getBasic2);
-app.get('/api/powers/:powersId', powersCtrl.getUlt2);
+// app.get('/api/powers/:Id', powersCtrl.getBasic1);
+app.get('/api/powers', powersCtrl.getPowers);
+app.get('/api/powers/:Id', powersCtrl.getUlt1);
+app.get('/api/powers/:Id', powersCtrl.getBasic2);
+app.get('/api/powers/:Id', powersCtrl.getUlt2);
 app.post('/api/powers', powersCtrl.create);
 app.listen(3000, function(){
   console.log('listening on port', this.address().port)

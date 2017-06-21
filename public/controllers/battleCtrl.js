@@ -5,9 +5,9 @@ angular.module('heroApp').controller('battleCtrl',
     console.log(battleSrvc.now)
 
      // 'Some data'
-     $scope.getBasic1 = function(){
+     $scope.getPowers = function(){
        // $scope.showHide = !$scope.showHide;
-       battleSrvc.getBasic1().then(response => {
+       battleSrvc.getPowers().then(response => {
          console.log(response);
          $scope.powers = response
         //  return battleSrvc.pow
