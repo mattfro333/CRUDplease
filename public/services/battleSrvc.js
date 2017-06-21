@@ -4,7 +4,7 @@ console.log(this.now);
 let powers
 if (!Array.prototype.joinWith) {
     +function () {
-        Array.prototype.joinWith = function(that, by, select) {
+        Array.prototype.joinWith = function(that, by, select, omit) {
             var together = [], length = 0;
             if (select) select.map(function(x){select[x] = 1;});
             function fields(it) {
@@ -39,12 +39,14 @@ var results_all = []
       powers = response.data
       console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
-
-// console.log(typeof this.now[1].hp + " " + typeof powers.basicdamage)
-//       this.now[1].hp -= powers[]basicdamage
+var P2HP = results_all[1].hp
+console.log(results_all)
+      P2HP -= results_all[0].basicdamage
 //
-// console.log(this.now[1].hp)
-      return console.log(results_all)
+// console.log(results_all[0].ultdamage)
+// console.log(P2HP)
+P2HP
+      return P2HP
     }).catch(err => console.log(err))
 }
 this.getBasic2 = function(req, res, next){
