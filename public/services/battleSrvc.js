@@ -30,65 +30,80 @@ if (!Array.prototype.joinWith) {
     }();
 }
 
-this.getPowers = function(req, res, next){
+this.getPowersBas1 = function(req, res, next){
   console.log(this.now);
   console.log(typeof this.now[1].hp)
     return $http.get('/api/powers').then( (response) => {
-let hero = this.now
+var hero = this.now
 var results_all = []
       powers = response.data
       console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
-var P2HP = results_all[1].hp
+results_all[1].hp
 console.log(results_all)
-      P2HP -= results_all[0].basicdamage
+      this.now[1].hp -= results_all[0].basicdamage
 //
 // console.log(results_all[0].ultdamage)
 // console.log(P2HP)
-P2HP
-      return P2HP
+
+      return this.now[1].hp
     }).catch(err => console.log(err))
 }
-this.getBasic2 = function(req, res, next){
-  console.log(this.now);
-  console.log(typeof this.now[1].hp)
-    return $http.get('/api/powers/2').then( (response) => {
-
+this.getPowersBas2 = function(req, res, next){
+  // console.log(this.now);
+  // console.log(typeof this.now[1].hp)
+    return $http.get('/api/powers').then( (response) => {
+var hero = this.now
+var results_all = []
       powers = response.data
       console.log(powers)
-console.log(typeof this.now[1].hp + " " + typeof powers.basicdamage)
-      this.now[0].hp -= powers.basicdamage
+      var results_all = hero.joinWith(powers, 'id');
+results_all[1].hp
+console.log(results_all)
+      this.now[0].hp -= results_all[1].basicdamage
+//
+// console.log(results_all[0].ultdamage)
+// console.log(P2HP)
 
-console.log(this.now[1].hp)
-      return powers
+      return this.now[0].hp
     }).catch(err => console.log(err))
 }
-this.getUlt1 = function(req, res, next){
+this.getPowersUlt1 = function(req, res, next){
   console.log(this.now);
   console.log(typeof this.now[1].hp)
-    return $http.get('/api/powers/1').then( (response) => {
-
+    return $http.get('/api/powers').then( (response) => {
+var hero = this.now
+var results_all = []
       powers = response.data
       console.log(powers)
-console.log(typeof this.now[1].hp + " " + typeof powers.basicdamage)
-      this.now[1].hp -= powers.ultdamage
+      var results_all = hero.joinWith(powers, 'id');
+results_all[1].hp
+console.log(results_all)
+      this.now[1].hp -= results_all[0].ultdamage
+//
+// console.log(results_all[0].ultdamage)
+// console.log(P2HP)
 
-console.log(this.now[1].hp)
-      return powers
+      return this.now[1].hp
     }).catch(err => console.log(err))
 }
-this.getUlt2 = function(req, res, next){
-  console.log(this.now);
-  console.log(typeof this.now[1].hp)
-    return $http.get('/api/powers/2').then( (response) => {
-
+this.getPowersUlt2 = function(req, res, next){
+  // console.log(this.now);
+  // console.log(typeof this.now[1].hp)
+    return $http.get('/api/powers').then( (response) => {
+var hero = this.now
+var results_all = []
       powers = response.data
       console.log(powers)
-console.log(typeof this.now[1].hp + " " + typeof powers.basicdamage)
-      this.now[0].hp -= powers.ultdamage
+      var results_all = hero.joinWith(powers, 'id');
+results_all[1].hp
+console.log(results_all)
+      this.now[0].hp -= results_all[1].ultdamage
+//
+// console.log(results_all[0].ultdamage)
+// console.log(P2HP)
 
-console.log(this.now[1].hp)
-      return powers
+      return this.now[0].hp
     }).catch(err => console.log(err))
 }
 

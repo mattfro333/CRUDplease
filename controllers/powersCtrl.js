@@ -31,7 +31,7 @@ module.exports = {
       }
     })
   },
-  getPowers:function(req, res){
+  getPowersBas1:function(req, res){
     db.powers.read_powers([], function(err, results){
       if (err){
         console.error(err);
@@ -53,7 +53,7 @@ module.exports = {
   //     return res.send(results[0]);
   //   })
   // },
-  getUlt1:function(req, res){
+  getPowersUlt1:function(req, res){
     db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
@@ -67,7 +67,7 @@ module.exports = {
     })
   },
 
-  getBasic2:function(req, res){
+  getPowersBas2:function(req, res){
     db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
@@ -80,7 +80,7 @@ module.exports = {
       return res.send(results[0]);
     })
   },
-  getUlt2:function(req, res){
+  getPowersUlt2:function(req, res){
     db.powers.read_power([req.params.Id],
     function(err, results){
       if (err){
