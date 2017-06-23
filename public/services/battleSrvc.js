@@ -42,9 +42,9 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[1].hp -= results_all[0].basicdamage
- if(this.now[1].hp === 0){
-   alert("dead")
- }
+ // if(this.now[1].hp === 0){
+ //   alert("dead")
+ // }
 // console.log(results_all[0].ultdamage)
 // console.log(P2HP)
 var P2HP = this.now[1].hp
