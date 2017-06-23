@@ -1,2 +1,2 @@
-/* Get List of Heroes */
-SELECT * FROM Hero
+/* Get List of heroes */
+SELECT * FROM hero

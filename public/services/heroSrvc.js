@@ -27,7 +27,7 @@ this.create = (data) => {
    }).catch(err => console.log(err))
  }
 
- this.create = (data) => {
+ this.createPowers = (data) => {
    return $http.post("/api/powers", data).then(function(response){
        return response.data
        console.log(data);

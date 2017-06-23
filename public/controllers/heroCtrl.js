@@ -6,8 +6,8 @@ var first
 $scope.getHeroes = function(){
   // $scope.showHide = !$scope.showHide;
   heroSrvc.getHeroes().then(response => {
-    if($scope.oneHero){
-       $scope.oneHero = false;
+    if($scope.onehero){
+       $scope.onehero = false;
     }
     $scope.heroes = response
     console.log($scope.heroes);
@@ -99,7 +99,7 @@ $scope.getHeroes = function(){
     // $scope.showHide = !$scope.showHide;
     heroSrvc.getHero().then(response => {
       console.log(response);
-      $scope.oneHero = response
+      $scope.onehero = response
     })
   }
 
@@ -109,6 +109,12 @@ $scope.getHeroes = function(){
           console.log(hero);
 
     })
+}
+$scope.createPowers = function(powers) {
+     heroSrvc.createPowers(powers).then(response => {
+       console.log(powers);
+
+ })
 }
    $scope.delete = function(name){
      console.log(name);

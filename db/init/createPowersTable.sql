@@ -11,4 +11,5 @@ CREATE TABLE IF NOT EXISTS powers(
 INSERT INTO powers(ultimate, ultDamage, basic, basicDamage)
 VALUES
 ('Claw Fury', 20, 'Claw Swipe', 5),
-('Drain Life', 30, 'Punch', 5)
+('Drain Life', 30, 'Punch', 5),
+('Spraying', 10, 'Meowing', 5)

@@ -1,3 +1,3 @@
 /* Get single hero by ID */
-SELECT * FROM Hero
+SELECT * FROM hero
 WHERE Id = $1 

@@ -1,5 +1,5 @@
-/* Update Heroe by Id */
-UPDATE Hero
+/* Update heroe by Id */
+UPDATE hero
 SET
   name = COALESCE($2, name),
   origin = COALESCE($3, origin),

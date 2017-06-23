@@ -11,7 +11,7 @@ db.init.createHeroTable([], function(err, results){
   if (err){
     console.error(err);
   } else {
-    console.log("Initialized Hero Table");
+    console.log("Initialized hero Table");
   }
 })
 // export Controller
@@ -49,7 +49,7 @@ module.exports = {
         return res.send(err);
       }
       if (results.length === 0){
-        return res.status(404).send("No Hero Found")
+        return res.status(404).send("No hero Found")
       }
       return res.send(results[0]);
     })
@@ -77,9 +77,9 @@ module.exports = {
         return res.send(err);
       }
       if (results.length === 0){
-        return res.status(404).send("Hero Not Found");
+        return res.status(404).send("hero Not Found");
       }
-      res.send('Hero ' + results[0].name + ' is dead.');
+      res.send('hero ' + results[0].name + ' is dead.');
     })
   }
 }

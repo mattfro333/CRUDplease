@@ -8,8 +8,8 @@ angular.module('heroApp').controller('battleCtrl',
        battleSrvc.getPowersBas1().then(response => {
 var showHide = response
 console.log(showHide)
-        if(showHide === 0){
-
+        if(showHide <= 0){
+            showHide = 0
             console.log(showHide)
            return $scope.showHide = true
         } else {
@@ -20,20 +20,46 @@ console.log(showHide)
      }
      $scope.getPowersUlt1 = function(){
        battleSrvc.getPowersUlt1().then(response => {
-         console.log(response);
-         $scope.powers = response
+         var showHide = response
+         console.log(showHide)
+                 if(showHide === 0){
+
+                     console.log(showHide)
+                    return $scope.showHide = true
+                 } else {
+                   console.log(response)
+                   return  response
+                 }
        })
      }
      $scope.getPowersBas2 = function(){
        battleSrvc.getPowersBas2().then(response => {
          console.log(response);
-         $scope.powers = response
+         var showHide = response
+         console.log(showHide)
+                 if(showHide === 0){
+
+                     console.log(showHide)
+                    return $scope.showHide = true
+                 } else {
+                   console.log(response)
+                   return  response
+                 }
        })
      }
      $scope.getPowersUlt2 = function(){
        battleSrvc.getPowersUlt2().then(response => {
          console.log(response);
-         $scope.powers = response
+         var showHide = response
+         console.log(showHide)
+                 if(showHide === 0){
+
+                     console.log(showHide)
+                    return $scope.showHide = true
+                 } else {
+                   console.log(response)
+                   return  response
+                 }
        })
      }
 

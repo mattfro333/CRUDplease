@@ -25,7 +25,7 @@ app.get('/api/powers', powersCtrl.getPowersBas1);
 app.get('/api/powers/:Id', powersCtrl.getPowersUlt1);
 app.get('/api/powers/:Id', powersCtrl.getPowersBas2);
 app.get('/api/powers/:Id', powersCtrl.getPowersUlt2);
-app.post('/api/powers', powersCtrl.create);
+app.post('/api/powers', powersCtrl.createPowers);
 app.listen(3000, function(){
   console.log('listening on port', this.address().port)
 })

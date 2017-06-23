@@ -1,18 +1,21 @@
-#yes-drop {
+.card-list {
 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 #outer-dropzone {
-  height: 600px;
-  width: 600px
+  height: 400px;
+  width: 400px
 }
 
 #inner-dropzone {
-  height: 500px;
-  width: 500px
+  height: 350px;
+  width: 350px
 }
 
 .dropzone {
-  background-color: #ccc;
+  background-color: #bbb;
   border: dashed 4px transparent;
   border-radius: 4px;
   margin: 10px auto 30px;

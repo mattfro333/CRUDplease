@@ -1,3 +1,3 @@
-/* Delete Hero from the Table BY ID! */
-DELETE FROM Hero
+/* Delete hero from the Table BY ID! */
+DELETE FROM hero
 WHERE name = $1

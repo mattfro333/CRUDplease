@@ -15,7 +15,7 @@ db.init.createPowersTable([], function(err, results){
 })
 // export Controller
 module.exports = {
-  create:function(req, res, next){
+  createPowers:function(req, res, next){
     db.powers.create_powers([
       req.body.ultimate,
       req.body.ultDamage,
@@ -119,7 +119,7 @@ module.exports = {
       if (results.length === 0){
         return res.status(404).send("powers Not Found");
       }
-      res.send('powers are gone is dead.');
+      res.send('powers are gone.');
     })
   }
 }

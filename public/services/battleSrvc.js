@@ -42,13 +42,13 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[1].hp -= results_all[0].basicdamage
- // if(this.now[1].hp === 0){
- //   alert("dead")
- // }
+  if(this.now[1].hp < 0){
+   this.now[1].hp = 0
+  }
 // console.log(results_all[0].ultdamage)
 // console.log(P2HP)
-var P2HP = this.now[1].hp
-      return P2HP
+
+      return this.now[1].hp
     }).catch(err => console.log(err))
 }
 this.getPowersBas2 = function(req, res, next){
@@ -63,9 +63,10 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[0].hp -= results_all[1].basicdamage
-//
-// console.log(results_all[0].ultdamage)
-// console.log(P2HP)
+
+      if(this.now[0].hp < 0){
+        this.now[0].hp = 0
+      }
 
       return this.now[0].hp
     }).catch(err => console.log(err))
@@ -82,9 +83,11 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[1].hp -= results_all[0].ultdamage
-//
-// console.log(results_all[0].ultdamage)
-// console.log(P2HP)
+
+      if(this.now[1].hp < 0){
+        this.now[1].hp = 0
+      }
+
 let health = this.now[1].hp
       return health
     }).catch(err => console.log(err))
@@ -101,9 +104,10 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[0].hp -= results_all[1].ultdamage
-//
-// console.log(results_all[0].ultdamage)
-// console.log(P2HP)
+
+      if(this.now[0].hp < 0){
+        this.now[0].hp = 0
+      }
 
       return this.now[0].hp
     }).catch(err => console.log(err))
