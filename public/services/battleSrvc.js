@@ -42,11 +42,13 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
       this.now[1].hp -= results_all[0].basicdamage
-//
+ if(this.now[1].hp === 0){
+   alert("dead")
+ }
 // console.log(results_all[0].ultdamage)
 // console.log(P2HP)
-
-      return this.now[1].hp
+var P2HP = this.now[1].hp
+      return P2HP
     }).catch(err => console.log(err))
 }
 this.getPowersBas2 = function(req, res, next){
@@ -83,8 +85,8 @@ console.log(results_all)
 //
 // console.log(results_all[0].ultdamage)
 // console.log(P2HP)
-
-      return this.now[1].hp
+let health = this.now[1].hp
+      return health
     }).catch(err => console.log(err))
 }
 this.getPowersUlt2 = function(req, res, next){
