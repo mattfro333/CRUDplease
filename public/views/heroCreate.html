@@ -2,22 +2,18 @@
 <body>
 
 
-<div class="birth">
+<form name="birth" class="birth">
 
     <h1>Birth a hero</h1>
-    <input ng-model="hero.name" type="text" name="" value="" placeholder="Name">
-    <input ng-model="hero.origin" type="text" name="" value="" placeholder="Origin">
-    <input ng-model="hero.hp" type="text" name="" value="" placeholder="Hit Points">
-    <input ng-model="hero.imageurl" type="text" name="" value="" placeholder="Image">
-    <button ng-click="create(hero)" class="btn btn-primary"  type="submit" name="button">Give Birth!</button>
-
-</div>
-<div class="birth">
+    <input ng-model="hero.name" type="text" name="" value="" placeholder="Name" required>
+    <input ng-model="hero.origin" type="text" name="" value="" placeholder="Origin" required>
+    <input ng-model="hero.hp" type="text" name="" value="" placeholder="Hit Points" required>
+    <input ng-model="hero.imageurl" type="text" name="" value="" placeholder="Image" required>
 <h1>Your heroes Abilities</h1>
-<input ng-model="powers.ultimate" type="text" name="" value="" placeholder="Ultimate Attack">
-<input ng-model="powers.ultDamage" type="text" name="" value="" placeholder="Ult Damage">
-<input ng-model="powers.basic" type="text" name="" value="" placeholder="Basic Attack">
-<input ng-model="powers.basicDamage" type="text" name="" value="" placeholder="Basic Damage">
-<button ng-click="createPowers(powers)" class="btn btn-primary"  type="submit" name="button">The Power!</button>
-</div>
+<input ng-model="powers.ultimate" type="text" name="" value="" placeholder="Ultimate Attack" required>
+<input ng-model="powers.ultDamage" type="text" name="" value="" placeholder="Ult Damage" required>
+<input ng-model="powers.basic" type="text" name="" value="" placeholder="Basic Attack" required>
+<input ng-model="powers.basicDamage" type="text" name="" value="" placeholder="Basic Damage" required>
+<button ng-click="create(hero); createPowers(powers)" class="btn btn-primary"  type="submit" name="button" ng-disabled="birth.$invalid" ui-sref="select">The Power!</button>
+</form>
 </body>
