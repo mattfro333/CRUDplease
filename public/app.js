@@ -1,4 +1,4 @@
-angular.module('heroApp',['ui.router'])
+angular.module('heroApp',['ui.router', 'ngAnimate'])
   .config(function ($stateProvider, $urlRouterProvider){
 
       $stateProvider

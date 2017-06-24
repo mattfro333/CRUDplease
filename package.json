@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mattfro333/CRUDplease#readme",
   "dependencies": {
+    "angular-animate": "^1.6.4",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "massive": "^2.6.0",
