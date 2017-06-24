@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./styles/battle.css">
 <body ng-controller="battleCtrl" class="ng-scope">
-
-  <div class="P1Card" ng-model = "chosen">
+<div class= "flexbut">
+  <div ng-model = "chosen">
     <div  id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
 
       <section class="card-details">
@@ -15,7 +15,7 @@
       </br>
     </div>
   </div>
-<div class="P2Card" ng-model = "chosen">
+<div ng-model = "chosen">
     <div id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
       <section class="card-details">
         Name: {{chosen[1].name}}
@@ -28,17 +28,20 @@
       </br>
     </div>
   </div>
-
-<container class="P1ab"><h1>P1 Abilities</h1></container>
-
-<button class="P1" ng-click="getPowersBas1(showHide)">Basic</button>
-<button class="P1" ng-click="getPowersUlt1(showHide)">Ultimate</button>
-
+</div>
+  <div class="flexbut">
+    <container class="P1ab"><h1>P1 Abilities</h1></container>
+    <container class="P2ab"><h1>P2 Abilities</h1></container>
+  </div>
+<div class="flexbut">
+ <div class="P1">
+  <button ng-click="getPowersBas1(showHide)">Basic</button>
+  <button ng-click="getPowersUlt1(showHide)">Ultimate</button>
+</div>
+ <div call="P2">
+  <button ng-click="getPowersBas2(showHide)">Basic</button>
+  <button ng-click="getPowersUlt2(showHide)">Ultimate</button>
+</div>
+</div>
 <button ng-show="showHide" ui-sref="death">Finish It!</button>
-<container class="P2ab"><h1>P2 Abilities</h1></container>
-
-
-<button class="P2" ng-click="getPowersUlt2(showHide)">Ultimate</button>
-<button class="P2" ng-click="getPowersBas2(showHide)">Basic</button>
-
 </body>

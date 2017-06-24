@@ -1,6 +1,6 @@
 angular.module('heroApp').service('battleSrvc', function($http){
 this.now
-console.log(this.now);
+// console.log(this.now);
 let powers
 if (!Array.prototype.joinWith) {
     +function () {
