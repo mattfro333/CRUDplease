@@ -6,6 +6,7 @@ angular.module('heroApp').controller('battleCtrl',
 
      $scope.getPowersBas1 = function(){
        battleSrvc.getPowersBas1().then(response => {
+         $scope.error = true;
 var showHide = response
 console.log(showHide)
         if(showHide <= 0){
@@ -13,7 +14,7 @@ console.log(showHide)
             console.log(showHide)
            return $scope.showHide = true
         } else {
-          console.log(response)
+          console.log($scope.error)
           return  response
         }
        })

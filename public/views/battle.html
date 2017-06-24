@@ -15,7 +15,7 @@
       </br>
     </div>
   </div>
-<div ng-model = "chosen">
+<div ng-class="{'shake':error}" class="animated" ng-model = "chosen">
     <div id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
       <section class="card-details">
         Name: {{chosen[1].name}}
@@ -35,7 +35,7 @@
   </div>
 <div class="flexbut">
  <div class="P1">
-  <button ng-click="getPowersBas1(showHide)">Basic</button>
+  <button ng-click="getPowersBas1(error =true)">Basic</button>
   <button ng-click="getPowersUlt1(showHide)">Ultimate</button>
 </div>
  <div call="P2">
