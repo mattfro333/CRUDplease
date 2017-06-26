@@ -25,7 +25,7 @@ angular.module('heroApp',['ui.router', 'ngAnimate'])
       .state('death', {
         url: '/death',
         templateUrl: './views/heroDeath.html',
-        controller: 'heroCtrl'
+        controller: 'battleCtrl'
       })
       $urlRouterProvider.otherwise('/')
   })

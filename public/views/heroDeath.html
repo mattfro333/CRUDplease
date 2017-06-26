@@ -1,7 +1,26 @@
 <link rel="stylesheet" href="./styles/herodeath.css">
 <body>
+  <div class="centerBut">
+    <div id="shake2" ng-model = "chosen">
+      <div  id="yes-drop" ng-model = "chosen"  class="draggable drag-drop card" >
+
+        <section class="card-details">
+          Name: {{chosen[0].name}}
+          </br>
+          Origin: {{chosen[0].origin}}
+          </br>
+          hp: {{chosen[0].hp}}
+        </section>
+        <img class="heroImg" ng-src="{{chosen[0].imageurl}}" alt="">
+        </br>
+      </div>
+    </div>
 <div class="death">
-  <input ng-model="hero.name" type="text" name="" value="" placeholder="name">
-  <button ng-click="delete(hero.name)" class="btn btn-primary"  type="submit" name="button"></button>
+  <input ng-hide="true"  type="text" ng-model="hero.name" ng-init="hero.name = chosen[0].name"></input>
+  <button ng-click="delete(hero.name)" class="btn btn-primary"  type="submit" name="button">Destroy {{chosen[0].name}}!!</button>
+</div>
+<div>
+  <button ui-sref="home">Have Mercy!!</button>
+</div>
 </div>
 </body>

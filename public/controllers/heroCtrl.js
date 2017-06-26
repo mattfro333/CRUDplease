@@ -82,7 +82,7 @@ $scope.getHeroes = function(){
          ondrop: function (event) {
            // let chosen = []
            console.log(event)
-           console.log(event.dragEvent.target.innerText.includes($scope.heroes[0].name))
+          //  console.log(event.dragEvent.target.innerText.includes($scope.heroes[0].name))
           for(var i = 0; i < $scope.heroes.length; i++) {
            if(event.dragEvent.target.innerText.includes($scope.heroes[i].name)){
              event = $scope.heroes[i]
@@ -117,6 +117,7 @@ $scope.createPowers = function(powers) {
  })
 }
    $scope.delete = function(name){
+
      console.log(name);
        heroSrvc.delete(name).then(response => {
 console.log(name);

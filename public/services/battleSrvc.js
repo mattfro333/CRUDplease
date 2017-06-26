@@ -31,17 +31,19 @@ if (!Array.prototype.joinWith) {
 }
 
 this.getPowersBas1 = function(req, res, next){
-  console.log(this.now);
-  console.log(typeof this.now[1].hp)
+  // console.log(this.now);
+  // console.log(typeof this.now[1].hp)
     return $http.get('/api/powers').then( (response) => {
 var hero = this.now
 var results_all = []
       powers = response.data
-      console.log(powers)
+      // console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
 results_all[1].hp
-console.log(results_all)
+// console.log(results_all)
+if(document.getElementById("shake").style.animationName !== "shake"){
       this.now[1].hp -= results_all[0].basicdamage
+    }
   if(this.now[1].hp < 0){
    this.now[1].hp = 0
   }
@@ -58,12 +60,13 @@ this.getPowersBas2 = function(req, res, next){
 var hero = this.now
 var results_all = []
       powers = response.data
-      console.log(powers)
+      // console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
 results_all[1].hp
-console.log(results_all)
+// console.log(results_all)
+if(document.getElementById("shake2").style.animationName !== "shake"){
       this.now[0].hp -= results_all[1].basicdamage
-
+}
       if(this.now[0].hp < 0){
         this.now[0].hp = 0
       }
@@ -72,18 +75,19 @@ console.log(results_all)
     }).catch(err => console.log(err))
 }
 this.getPowersUlt1 = function(req, res, next){
-  console.log(this.now);
-  console.log(typeof this.now[1].hp)
+  // console.log(this.now);
+  // console.log(typeof this.now[1].hp)
     return $http.get('/api/powers').then( (response) => {
 var hero = this.now
 var results_all = []
       powers = response.data
-      console.log(powers)
+      // console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
 results_all[1].hp
-console.log(results_all)
+// console.log(results_all)
+if(document.getElementById("shake").style.animationName !== "shake"){
       this.now[1].hp -= results_all[0].ultdamage
-
+}
       if(this.now[1].hp < 0){
         this.now[1].hp = 0
       }
@@ -99,12 +103,13 @@ this.getPowersUlt2 = function(req, res, next){
 var hero = this.now
 var results_all = []
       powers = response.data
-      console.log(powers)
+      // console.log(powers)
       var results_all = hero.joinWith(powers, 'id');
 results_all[1].hp
 console.log(results_all)
+if(document.getElementById("shake2").style.animationName !== "shake"){
       this.now[0].hp -= results_all[1].ultdamage
-
+}
       if(this.now[0].hp < 0){
         this.now[0].hp = 0
       }
