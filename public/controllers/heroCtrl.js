@@ -36,20 +36,7 @@ $scope.getHeroes = function(){
             target.setAttribute('data-y', y);
           },
          onend: function(event) {
-          //  console.log($scope.heroes[0].name)
-          //  console.log(event)
-          //  console.log(event.target.innerText.includes($scope.heroes[0].name))
-          //  if(event.target.innerText.includes($scope.heroes[0].name)){
-          //    event = $scope.heroes[0]
-          //  } else if (event.target.innerText.includes($scope.heroes[1].name)){
-          //    event = $scope.heroes[1]
-          //    console.log($scope.heroes[1].name)
-          //    console.log(event)
-          //  }
-           // prop type grab through innerHTML
-   //         if(first === object.target.innerHTML)
-   //     firstChild.style.textDecoration = "none"
-   // secondChild.style.backgroundColor = "red"
+  
 
           }
       });
