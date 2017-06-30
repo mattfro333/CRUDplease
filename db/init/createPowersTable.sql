@@ -1,4 +1,4 @@
-DROP TABLE powers;
+-- DROP TABLE powers;
 
 CREATE TABLE IF NOT EXISTS powers(
   Id SERIAL PRIMARY KEY,
@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS powers(
   basicDamage INTEGER
 );
 
-INSERT INTO powers(ultimate, ultDamage, basic, basicDamage)
-VALUES
-('Claw Fury', 20, 'Claw Swipe', 5),
-('Drain Life', 30, 'Punch', 5),
-('Spraying', 10, 'Meowing', 5)
+-- INSERT INTO powers(ultimate, ultDamage, basic, basicDamage)
+-- VALUES
+-- ('Claw Fury', 20, 'Claw Swipe', 5),
+-- ('Drain Life', 30, 'Punch', 5),
+-- ('Spraying', 10, 'Meowing', 5)
