@@ -71,7 +71,7 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
         this.now[0].hp = 0
       }
 
-      return this.now[0].hp
+      return results_all[1].basicdamage 
     }).catch(err => console.log(err))
 }
 this.getPowersUlt1 = function(req, res, next){
