@@ -9,15 +9,16 @@ angular.module('heroApp').controller('battleCtrl',
 
 document.getElementById("shake").style.animationName = "shake"
 document.getElementById("shake2").style.animationName = ""
-var showHide = response
-console.log(showHide)
-        if(showHide <= 0){
-            showHide = 0
+$scope.response = response
+var showHide = $scope.response
+
+        if(showHide === 0){
+
             // console.log(showHide)
            return $scope.showHide = true
         } else {
-
-          return  response
+console.log($scope.response)
+          return  $scope.response
         }
        })
      }

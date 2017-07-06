@@ -47,10 +47,10 @@ if(document.getElementById("shake").style.animationName !== "shake"){
   if(this.now[1].hp < 0){
    this.now[1].hp = 0
   }
-// console.log(results_all[0].ultdamage)
+console.log(results_all[0].basic)
 // console.log(P2HP)
 
-      return this.now[1].hp
+      return results_all[0].basic
     }).catch(err => console.log(err))
 }
 this.getPowersBas2 = function(req, res, next){
@@ -71,7 +71,7 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
         this.now[0].hp = 0
       }
 
-      return results_all[1].basicdamage 
+      return this.now[0].hp
     }).catch(err => console.log(err))
 }
 this.getPowersUlt1 = function(req, res, next){
