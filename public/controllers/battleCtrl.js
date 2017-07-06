@@ -9,16 +9,16 @@ angular.module('heroApp').controller('battleCtrl',
 
 document.getElementById("shake").style.animationName = "shake"
 document.getElementById("shake2").style.animationName = ""
-$scope.response = response
-var showHide = $scope.response
+$scope.attack = response
+var showHide = $scope.attack
 
         if(showHide === 0){
 
             // console.log(showHide)
            return $scope.showHide = true
         } else {
-console.log($scope.response)
-          return  $scope.response
+console.log($scope.attack)
+          return  $scope.attack
         }
        })
      }
@@ -26,7 +26,8 @@ console.log($scope.response)
        battleSrvc.getPowersUlt1().then(response => {
   document.getElementById("shake").style.animationName = "shake"
   document.getElementById("shake2").style.animationName = ""
-         var showHide = response
+  $scope.attack = response
+  var showHide = $scope.attack
         //  console.log(showHide)
                  if(showHide === 0){
 
@@ -34,7 +35,7 @@ console.log($scope.response)
                     return $scope.showHide = true
                  } else {
                   //  console.log(response)
-                   return  response
+                   return  $scope.attack
                  }
        })
      }
@@ -42,16 +43,15 @@ console.log($scope.response)
        battleSrvc.getPowersBas2().then(response => {
     document.getElementById("shake2").style.animationName = "shake"
     document.getElementById("shake").style.animationName = ""
-         console.log(response);
-         var showHide = response
-         console.log(showHide)
+    $scope.attack = response
+    var showHide = $scope.attack
                  if(showHide === 0){
 
-                    //  console.log(showHide)
+                     console.log(showHide)
                     return $scope.showHide = true
                  } else {
                   //  console.log(response)
-                   return  response
+                   return  $scope.attack
                  }
        })
      }
@@ -59,8 +59,8 @@ console.log($scope.response)
        battleSrvc.getPowersUlt2().then(response => {
       document.getElementById("shake2").style.animationName = "shake"
       document.getElementById("shake").style.animationName = ""
-         console.log(response);
-         var showHide = response
+      $scope.attack = response
+      var showHide = $scope.attack
         //  console.log(showHide)
                  if(showHide === 0){
 
@@ -68,7 +68,7 @@ console.log($scope.response)
                     return $scope.showHide = true
                  } else {
                   //  console.log(response)
-                   return  response
+                   return  $scope.attack
                  }
        })
      }
