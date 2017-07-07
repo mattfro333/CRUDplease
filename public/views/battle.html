@@ -15,7 +15,7 @@
       </br>
     </div>
   </div>
-<div class="flash rainbow" ng-show="!showHide">
+<div ng-show="!showHide" class="flash rainbow">
   {{attack}}
   </div>
 
@@ -39,12 +39,12 @@
   </div>
 <div class="flexbut">
  <div class="P1">
-  <button ng-click="getPowersBas1(showHide)" ng-disabled="showHide">Basic</button>
-  <button ng-click="getPowersUlt1(showHide)" ng-disabled="showHide">Ultimate</button>
+  <button ng-click="getPowersBas1(showHide)" ng-disabled="showHide || butBlock">Basic</button>
+  <button ng-click="getPowersUlt1(showHide)" ng-disabled="showHide || butBlock">Ultimate</button>
 </div>
  <div call="P2">
-  <button ng-click="getPowersBas2(showHide)" ng-disabled="showHide">Basic</button>
-  <button ng-click="getPowersUlt2(showHide)" ng-disabled="showHide">Ultimate</button>
+  <button ng-click="getPowersBas2(showHide)" ng-disabled="showHide || butBlock2">Basic</button>
+  <button ng-click="getPowersUlt2(showHide)" ng-disabled="showHide || butBlock2">Ultimate</button>
 </div>
 </div>
 <div class="centerBut">

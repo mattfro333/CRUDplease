@@ -7,9 +7,10 @@ angular.module('heroApp').controller('battleCtrl',
      $scope.getPowersBas1 = function(){
        battleSrvc.getPowersBas1().then(response => {
 
-document.getElementById("shake").style.animationName = "shake"
-document.getElementById("shake2").style.animationName = ""
+         document.getElementById("shake").style.animationName = "shake"
+         document.getElementById("shake2").style.animationName = ""
 showHide = response
+
         if(showHide === ""){
 
             // console.log(showHide)
@@ -17,6 +18,8 @@ showHide = response
         } else {
           $scope.attack = response + "!!"
           let showHide = $scope.attack
+          $scope.butBlock = true
+          $scope.butBlock2 = false
 console.log($scope.attack + '!!')
           return  showHide
         }
@@ -29,10 +32,12 @@ console.log($scope.attack + '!!')
 showHide = response
         //  console.log(showHide)
                  if(showHide === ""){
-
+                  $scope.showHide = true
                      console.log(showHide)
-                    return $scope.showHide = true
+                    return showHide
                  } else {
+                   $scope.butBlock = true
+                   $scope.butBlock2 = false
                    $scope.attack = $scope.chosen[0].name + " Attacks With " +  response + "!!"
                    let showHide = $scope.attack
                   //  console.log(response)
@@ -50,6 +55,8 @@ showHide = response
                      console.log(showHide)
                     return $scope.showHide = true
                  } else {
+                   $scope.butBlock = false
+                   $scope.butBlock2 = true
                    $scope.attack = response + "!!"
                    let showHide = $scope.attack
                   //  console.log(response)
@@ -68,6 +75,8 @@ showHide = response
                     //  console.log(showHide)
                     return $scope.showHide = true
                  } else {
+                   $scope.butBlock = false
+                   $scope.butBlock2 = true
                    $scope.attack = $scope.chosen[1].name + " Attacks With " +  response + "!!"
                    let showHide = $scope.attack
                   //  console.log(response)

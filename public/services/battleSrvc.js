@@ -53,7 +53,7 @@ if(document.getElementById("shake").style.animationName !== "shake"){
 console.log(results_all[0].basic)
 // console.log(P2HP)
 
-      return results_all[0].basic
+  return results_all[0].basic
     }).catch(err => console.log(err))
 }
 this.getPowersBas2 = function(req, res, next){
