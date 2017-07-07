@@ -43,9 +43,11 @@ results_all[1].hp
 // console.log(results_all)
 if(document.getElementById("shake").style.animationName !== "shake"){
       this.now[1].hp -= results_all[0].basicdamage
+
     }
   if(this.now[1].hp <= 0){
-  return this.now[1].hp = 0
+    this.now[1].hp = 0
+    return ""
 
   }
 console.log(results_all[0].basic)
@@ -69,7 +71,8 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
       this.now[0].hp -= results_all[1].basicdamage
 }
       if(this.now[0].hp <= 0){
-      return this.now[0].hp = 0
+      this.now[0].hp = 0
+          return ""
       }
 
       return results_all[1].basic
@@ -90,7 +93,8 @@ if(document.getElementById("shake").style.animationName !== "shake"){
       this.now[1].hp -= results_all[0].ultdamage
 }
       if(this.now[1].hp <= 0){
-    return this.now[1].hp = 0
+        this.now[1].hp = 0
+        return ""
       }
 
       return results_all[0].ultimate
@@ -111,7 +115,8 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
       this.now[0].hp -= results_all[1].ultdamage
 }
       if(this.now[0].hp <= 0){
-      return this.now[0].hp = 0
+      this.now[0].hp = 0
+      return ""
       }
 
       return results_all[1].ultimate

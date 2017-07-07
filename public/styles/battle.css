@@ -19,6 +19,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: -7em;
 }
 
 .flexbut {
@@ -60,12 +61,14 @@ button {
    }
  }
 
- .test {
-   font-size: 3em;
+ .flash {
+   font-size: 2.7em;
    position: relative;
      display: flex;
      align-items: center;
-     top: -7.7em;
+     justify-content: center;
+     text-align: center;
+     top: -7.3em;
  }
 
  .rainbow {
