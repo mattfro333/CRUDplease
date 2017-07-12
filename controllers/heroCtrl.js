@@ -56,7 +56,7 @@ module.exports = {
   },
   update:function(req, res){
     db.hero.update_hero([
-      req.params.Id,
+      req.params.name,
       req.body.name,
       req.body.origin,
       req.body.hp,
@@ -67,7 +67,7 @@ module.exports = {
         console.error(err);
         return res.send(err);
       }
-      return res.send(results[0]);
+      return res.send(results);
     })
   },
   delete:function(req, res){

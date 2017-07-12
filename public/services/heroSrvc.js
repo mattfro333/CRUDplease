@@ -13,6 +13,12 @@ this.create = (data) => {
       console.log(data);
     }).catch(err => console.log(err))
  }
+ this.update = (data) => {
+   return $http.post("/api/heroes", data).then(function(response){
+       return response.data
+       console.log(data);
+     }).catch(err => console.log(err))
+  }
 
  this.delete = (data) => {
    console.log(data);

@@ -106,7 +106,13 @@ console.log(name);
 
        console.log(chosen);
     }
+    $scope.update = function(name){
 
+      console.log(name);
+        heroSrvc.update(name).then(response => {
+ console.log(name);
+        });
+      };
 
 
 

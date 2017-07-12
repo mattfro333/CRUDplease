@@ -17,7 +17,7 @@ const powersCtrl = require('./controllers/powersCtrl');
 app.get('/api/heroes', heroCtrl.getHeroes);
 app.get('/api/heroes/:name', heroCtrl.getHero);
 app.post('/api/heroes', heroCtrl.create);
-// app.put('/api/heroes/:Id', heroCtrl.update);
+app.put('/api/heroes/:name', heroCtrl.update);
 app.delete('/api/heroes/:name', heroCtrl.delete);
 app.get('/api/powers', powersCtrl.getPowersBas1);
 app.get('/api/powers', powersCtrl.getPowersUlt1);

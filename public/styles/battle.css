@@ -82,7 +82,7 @@ button {
  	20%{color: red;}
  	40%{color: yellow;}
   80%{color: lightgreen}
- 	100%{color: orange;}
+ 	100%{color: yellow;}
  }
  /* Internet Explorer */
  @-ms-keyframes rainbow{
@@ -90,7 +90,7 @@ button {
    20%{color: red;}
    40%{color: yellow;}
    80%{color: lightgreen}
-   100%{color: orange;}
+   100%{color: yellow;}
  }
 
  /* Standar Syntax */
@@ -99,7 +99,7 @@ button {
    20%{color: red;}
    40%{color: yellow;}
    80%{color: lightgreen}
-   100%{color: orange;}
+   100%{color: yellow;}
  }
 
 @media (max-width: 800px){
