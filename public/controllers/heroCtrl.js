@@ -36,7 +36,7 @@ $scope.getHeroes = function(){
             target.setAttribute('data-y', y);
           },
          onend: function(event) {
-  
+
 
           }
       });
@@ -81,15 +81,6 @@ $scope.getHeroes = function(){
       });
   })
 }
-
-  $scope.getHero = function(){
-    // $scope.showHide = !$scope.showHide;
-    heroSrvc.getHero().then(response => {
-      console.log(response);
-      $scope.onehero = response
-    })
-  }
-
 
    $scope.create = function(hero) {
         heroSrvc.create(hero).then(response => {

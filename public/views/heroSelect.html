@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="./styles/heroSelect.css">
 
 <button ng-click='getHeroes()'>Select Combatants</button>
-<button ng-click='getHero()'>Select Combatant</button>
+
 <div class="card-list">
 
 
@@ -17,18 +17,6 @@
     <img class="heroImg" ng-src="{{hero.imageurl}}" alt="">
     </br>
   </div>
-
-  <div class="draggable drag-drop card" ng-if = "onehero">
-    <section class="card-details">
-      Name: {{onehero.name}}
-      </br>
-      Origin: {{onehero.origin}}
-      </br>
-      hp: {{onehero.hp}}
-    </section>
-    <img class="heroImg" ng-src="{{onehero.imageurl}}" alt="">
-    </br>
-  </div>
 </div>
 
 <div id="outer-dropzone"  class="dropzone">
@@ -36,5 +24,5 @@
   <div id="inner-dropzone"  class="dropzone">#Drag Hero Here</div>
 </div>
 <button class="fight" ng-click="fight({arr: chosen})" ui-sref="battle">Fight!!!</button>
-<!-- <script src=".././dragdrop.js"></script> -->
+
 </body>

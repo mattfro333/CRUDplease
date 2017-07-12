@@ -42,7 +42,7 @@ module.exports = {
     })
   },
   getHero:function(req, res){
-    db.hero.read_hero([req.params.Id],
+    db.hero.read_hero([req.params.name],
     function(err, results){
       if (err){
         console.error(err);
@@ -51,7 +51,7 @@ module.exports = {
       if (results.length === 0){
         return res.status(404).send("No hero Found")
       }
-      return res.send(results[0]);
+      return res.send(results);
     })
   },
   update:function(req, res){
