@@ -29,8 +29,8 @@
 }
 
 .fight {
-  position: absolute;
-  top: 69%
+  position: relative;
+  top: -14em
 }
 
 .drag-drop {

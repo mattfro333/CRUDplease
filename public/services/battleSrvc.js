@@ -47,7 +47,7 @@ if(document.getElementById("shake").style.animationName !== "shake"){
     }
   if(this.now[1].hp <= 0){
     this.now[1].hp = 0
-    return ""
+    return this.now[1].name + " has been defeated!"
 
   }
 console.log(results_all[0].basic)
@@ -72,7 +72,7 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
 }
       if(this.now[0].hp <= 0){
       this.now[0].hp = 0
-          return ""
+          return this.now[0].name + " has been defeated!"
       }
 
       return results_all[1].basic
@@ -94,7 +94,7 @@ if(document.getElementById("shake").style.animationName !== "shake"){
 }
       if(this.now[1].hp <= 0){
         this.now[1].hp = 0
-        return ""
+        return this.now[1].name + " has been defeated!"
       }
 
       return results_all[0].ultimate
@@ -116,7 +116,7 @@ if(document.getElementById("shake2").style.animationName !== "shake"){
 }
       if(this.now[0].hp <= 0){
       this.now[0].hp = 0
-      return ""
+      return this.now[0].name + " has been defeated!"
       }
 
       return results_all[1].ultimate

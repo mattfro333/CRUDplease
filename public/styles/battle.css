@@ -78,28 +78,28 @@ button {
 
  /* Chrome, Safari, Opera */
  @-webkit-keyframes rainbow{
+  10%{color: yellow;}
  	20%{color: red;}
  	40%{color: yellow;}
- 	60%{color: green;}
- 	80%{color: blue;}
+  80%{color: lightgreen}
  	100%{color: orange;}
  }
  /* Internet Explorer */
  @-ms-keyframes rainbow{
- 	20%{color: red;}
- 	40%{color: yellow;}
- 	60%{color: green;}
- 	80%{color: blue;}
- 	100%{color: orange;}
+   10%{color: yellow;}
+   20%{color: red;}
+   40%{color: yellow;}
+   80%{color: lightgreen}
+   100%{color: orange;}
  }
 
  /* Standar Syntax */
  @keyframes rainbow{
- 	20%{color: red;}
- 	40%{color: yellow;}
- 	60%{color: green;}
- 	80%{color: blue;}
- 	100%{color: orange;}
+   10%{color: yellow;}
+   20%{color: red;}
+   40%{color: yellow;}
+   80%{color: lightgreen}
+   100%{color: orange;}
  }
 
 @media (max-width: 800px){

@@ -11,16 +11,18 @@ angular.module('heroApp').controller('battleCtrl',
          document.getElementById("shake2").style.animationName = ""
 showHide = response
 
-        if(showHide === ""){
-
+        if(showHide === battleSrvc.now[1].name + " has been defeated!"){
+                  $scope.showHide = true
             // console.log(showHide)
-           return $scope.showHide = true
+            $scope.attack = showHide
+
+           return showHide
         } else {
           $scope.attack = response + "!!"
           let showHide = $scope.attack
           $scope.butBlock = true
           $scope.butBlock2 = false
-console.log($scope.attack + '!!')
+
           return  showHide
         }
        })
@@ -31,10 +33,12 @@ console.log($scope.attack + '!!')
   document.getElementById("shake2").style.animationName = ""
 showHide = response
         //  console.log(showHide)
-                 if(showHide === ""){
+        if(showHide === battleSrvc.now[1].name + " has been defeated!"){
                   $scope.showHide = true
-                     console.log(showHide)
-                    return showHide
+
+            $scope.attack = showHide
+
+           return showHide
                  } else {
                    $scope.butBlock = true
                    $scope.butBlock2 = false
@@ -50,16 +54,18 @@ showHide = response
     document.getElementById("shake2").style.animationName = "shake"
     document.getElementById("shake").style.animationName = ""
 showHide = response
-                 if(showHide === ""){
+if(showHide === battleSrvc.now[0].name + " has been defeated!"){
+          $scope.showHide = true
 
-                     console.log(showHide)
-                    return $scope.showHide = true
+    $scope.attack = showHide
+
+   return showHide
                  } else {
                    $scope.butBlock = false
                    $scope.butBlock2 = true
                    $scope.attack = response + "!!"
                    let showHide = $scope.attack
-                  //  console.log(response)
+
                    return  showHide
                  }
        })
@@ -70,16 +76,18 @@ showHide = response
       document.getElementById("shake").style.animationName = ""
 showHide = response
         //  console.log(showHide)
-                 if(showHide === ""){
+        if(showHide === battleSrvc.now[0].name + " has been defeated!"){
+                  $scope.showHide = true
+            console.log(showHide)
+            $scope.attack = showHide
 
-                    //  console.log(showHide)
-                    return $scope.showHide = true
+           return showHide
                  } else {
                    $scope.butBlock = false
                    $scope.butBlock2 = true
                    $scope.attack = $scope.chosen[1].name + " Attacks With " +  response + "!!"
                    let showHide = $scope.attack
-                  //  console.log(response)
+              
                    return  showHide
                  }
        })

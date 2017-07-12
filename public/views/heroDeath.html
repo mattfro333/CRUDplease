@@ -17,7 +17,7 @@
     </div>
 <div class="death">
   <input ng-hide="true"  type="text" ng-model="hero.name" ng-init="hero.name = chosen[0].name"></input>
-  <button ng-click="delete(hero.name)" class="btn btn-primary"  type="submit" name="button">Destroy {{chosen[0].name}}!!</button>
+  <button ng-click="delete(hero.name)" class="btn btn-primary"  type="submit" name="button" ui-sref="home">Destroy {{chosen[0].name}}!!</button>
 </div>
 <div>
   <button ui-sref="home">Have Mercy!!</button>
