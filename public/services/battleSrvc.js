@@ -30,6 +30,10 @@ if (!Array.prototype.joinWith) {
     }();
 }
 
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 this.getPowersBas1 = function(req, res, next){
   // console.log(this.now);
   // console.log(typeof this.now[1].hp)
@@ -42,7 +46,7 @@ var results_all = []
 results_all[1].hp
 // console.log(results_all)
 if(document.getElementById("shake").style.animationName !== "shake"){
-      this.now[1].hp -= results_all[0].basicdamage
+      this.now[1].hp -= Math.round(getRandomArbitrary(results_all[0].basicdamage, 15))
 
     }
   if(this.now[1].hp <= 0){
@@ -68,7 +72,7 @@ var results_all = []
 results_all[1].hp
 // console.log(results_all)
 if(document.getElementById("shake2").style.animationName !== "shake"){
-      this.now[0].hp -= results_all[1].basicdamage
+      this.now[0].hp -= Math.round(getRandomArbitrary(results_all[1].basicdamage, 15))
 }
       if(this.now[0].hp <= 0){
       this.now[0].hp = 0
@@ -90,7 +94,7 @@ var results_all = []
 results_all[1].hp
 // console.log(results_all)
 if(document.getElementById("shake").style.animationName !== "shake"){
-      this.now[1].hp -= results_all[0].ultdamage
+      this.now[1].hp -= Math.round(getRandomArbitrary(14, results_all[0].ultdamage))
 }
       if(this.now[1].hp <= 0){
         this.now[1].hp = 0
@@ -112,7 +116,7 @@ var results_all = []
 results_all[1].hp
 console.log(results_all)
 if(document.getElementById("shake2").style.animationName !== "shake"){
-      this.now[0].hp -= results_all[1].ultdamage
+      this.now[0].hp -= Math.round(getRandomArbitrary(14, results_all[1].ultdamage))
 }
       if(this.now[0].hp <= 0){
       this.now[0].hp = 0
