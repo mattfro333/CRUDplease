@@ -7,13 +7,13 @@
     <h1>Birth a Hero</h1>
     <input ng-model="hero.name" type="text" name="" value="" placeholder="Name" maxlength="20" required>
     <input ng-model="hero.origin" type="text" name="" value="" placeholder="Origin" maxlength="20" required>
-    <input ng-model="hero.hp" type="text" name="" value="" placeholder="Hit Points" maxlength="2" required>
+    <input ng-model="hero.hp" type="text" name="" value="" placeholder="Hit Points Integer" maxlength="2" required>
     <input ng-model="hero.imageurl" type="text" name="" value="" placeholder="Image URL" required>
 <h1>Select your Abilities</h1>
 <input ng-model="powers.ultimate" type="text" name="" value="" placeholder="Ultimate Attack Name" maxlength="20" required>
 <input ng-model="powers.ultDamage" value="" placeholder="Ult Damage Max 30" type="number" max="30" maxlength="2" required>
 <input ng-model="powers.basic" type="text" name="" value="" placeholder="Basic Attack Name" maxlength="20" required>
-<input ng-model="powers.basicDamage" type="text" name="" value="" placeholder="Basic Damage" maxlength="1" required>
+<input ng-model="powers.basicDamage" type="text" name="" value="" placeholder="Basic Damage Integer" maxlength="1" required>
 <button ng-click="create(hero); createPowers(powers)" class="btn btn-primary"  type="submit" name="button" ng-disabled="birth.$invalid" ui-sref="select">The Power!</button>
 </form>
 </body>
