@@ -1,3 +1,13 @@
+.card{
+  background-color: #adadad;
+  width: 200px;
+  border-radius: 20px;
+  margin: 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em
+}
 .card-list {
 
   display: flex;
@@ -76,4 +86,19 @@
       height: 490px;
       width: 490px
     }
+    .card{
+        padding: 20px;
+        width: 150px;
+        border-radius: 20px;
+        margin: 10px;
+        height: 277px;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4em
+      }
+
+    .heroImg{
+        max-height: 150px;
+        max-width: 100px;
+      }
   }
