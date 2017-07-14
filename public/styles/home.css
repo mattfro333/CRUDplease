@@ -7,6 +7,9 @@
 }
 .title {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 27vh;
   font-size: 4.5em;
   text-align: center;
