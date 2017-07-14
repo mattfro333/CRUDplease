@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const massive = require('massive');
 const app = module.exports = express();
 
+app.set('port', (process.env.PORT || 3000));
+
 app.use(bodyParser.json());
 app.use(express.static('./public'));
 
@@ -24,6 +26,11 @@ app.get('/api/powers', powersCtrl.getPowersUlt1);
 app.get('/api/powers', powersCtrl.getPowersBas2);
 app.get('/api/powers', powersCtrl.getPowersUlt2);
 app.post('/api/powers', powersCtrl.createPowers);
-app.listen(3000, function(){
-  console.log('listening on port', this.address().port)
-})
+
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
