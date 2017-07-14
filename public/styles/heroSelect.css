@@ -91,10 +91,10 @@
         width: 150px;
         border-radius: 20px;
         margin: 10px;
-        height: 350px;
+        height: 290px;
         display: flex;
         flex-direction: column;
-        font-size: 1.8em
+        font-size: 1.6em
       }
 
     .heroImg{
