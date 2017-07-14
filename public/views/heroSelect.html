@@ -1,12 +1,7 @@
-<link rel="stylesheet" href="./styles/heroSelect.css">
 <body class="ng-cloak, ng-scope" ng-cloak>
-
-
-<button ng-click='getHeroes()'>Select 2 Combatants</button>
+  <button ng-click='getHeroes()'>Select 2 Combatants</button>
 
 <div class="card-list">
-
-
   <div class="draggable drag-drop card" ng-if = "!onehero" ng-repeat = "hero in heroes">
     <section class="card-details">
       Name: {{hero.name}}

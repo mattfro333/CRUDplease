@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="heroApp">
-<link rel="stylesheet" href="./styles/styles.css">
-  <head>
-
-    <style>
-    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
- display: none !important;
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
 }
-   </style>
-
+</style>
+<link rel="stylesheet" href="./styles/styles.css">
+<link rel="stylesheet" href="./styles/home.css">
+<link rel="stylesheet" href="./styles/heroCreate.css">
+<link rel="stylesheet" href="./styles/heroSelect.css">
+<html lang="en" ng-app="heroApp" ng-cloak>
+  <head>
     <title></title>
-
   </head>
   <body ng-cloak ng-controller='heroCtrl'>
     <nav>
-
 <p ui-sref="home">Home</p>
   <p ui-sref="birth">Birth</p>
     <p ui-sref="select">Select</p>
 </nav>
       <ui-view></ui-view>
-
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
