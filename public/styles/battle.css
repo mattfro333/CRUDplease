@@ -102,7 +102,7 @@ button {
    100%{color: yellow;}
  }
 
-@media (max-width: 1200px){
+@media (max-width: 1000px){
   body {
 
     background-image: url("./images/battle.jpeg");
