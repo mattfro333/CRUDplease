@@ -18,13 +18,13 @@
 @media (max-width: 1000px) {
   .butBirth {
     position:relative;
-    top: .77em
+    top: .4em
   }
   .birth {
     position: relative;
     border-radius: 60px;
     text-align: center;
-    height: 930px;
+    height: 940px;
     width: 430px;
     font-size: 1.5em;
     background-color: grey
