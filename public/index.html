@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="heroApp">
+<link rel="stylesheet" href="./styles/styles.css">
   <head>
-    <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
+
+    <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ display: none !important;
+}
+   </style>
+
     <title></title>
-    <link rel="stylesheet" href="./styles/styles.css">
+
   </head>
-  <body ng-controller='heroCtrl'>
+  <body ng-cloak ng-controller='heroCtrl'>
     <nav>
 
 <p ui-sref="home">Home</p>
