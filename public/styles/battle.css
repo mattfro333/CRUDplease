@@ -132,4 +132,11 @@ button {
   justify-content: center;
   align-items: center;
 }
+.centerBut {
+  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -1em;
+}
 }
