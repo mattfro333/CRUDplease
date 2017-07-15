@@ -26,4 +26,18 @@ body {
       align-items: center;
       top: 19em
   }
+  .card{
+    padding: 20px;
+    width: 275px;
+    border-radius: 20px;
+    margin: 10px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9em
+  }
+  .heroImg{
+    max-height: 250px;
+    max-width: 230px;
+  }
 }
