@@ -1,5 +1,6 @@
 .birth {
   position: relative;
+  border: 7px solid red;
   border-radius: 60px;
   text-align: center;
   height: 430px;
@@ -22,7 +23,7 @@
   }
   .birth {
     position: relative;
-    border: thin white;
+    border: 7px solid red;
     border-radius: 60px;
     text-align: center;
     height: 940px;
