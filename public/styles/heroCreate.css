@@ -22,6 +22,7 @@
   }
   .birth {
     position: relative;
+    border: thin white;
     border-radius: 60px;
     text-align: center;
     height: 940px;
